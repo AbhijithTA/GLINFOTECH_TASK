@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { db } from "../fireBaseConfig";
 import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
@@ -9,7 +9,7 @@ export default function Profile() {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
 
-  // Fetch user details from Firestore
+  // Fetching the user details from Firestore
   useEffect(() => {
     const fetchUserData = async () => {
       if (user?.uid) {
